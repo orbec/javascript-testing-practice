@@ -6,4 +6,20 @@ export default [
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   eslintConfigPrettier,
+  {
+    env: {
+      browser: true,
+      node: true,
+    },
+  },
+  {
+    overrides: [
+      {
+        files: ["tests/**/*"],
+        env: {
+          jest: true,
+        },
+      },
+    ],
+  },
 ];
